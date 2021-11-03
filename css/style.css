@@ -35,6 +35,6 @@
   padding: 10px 40px;
 }
 
-.box a:active{
-  background-color: rgba(30, 62, 123, 0.5);
+.box a:hover{
+  background-color: rgba(30, 62, 123, 0.8);
 }

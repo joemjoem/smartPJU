@@ -76,10 +76,14 @@ border: 1px solid #7c7c7c;
   text-align: center;
   border-radius: 5px;
   border: none;
-  background-color: #1E3E7B;
+  background-color: rgb(30, 62, 123);
   color: #ffffff;
   padding: 4px 20px;
   margin-left: 25px;
+}
+
+.main table tr td a:hover{
+  background-color: rgba(30, 62, 123,0.7);
 }
 
 .main table tr td:nth-child(5) p.tidak_aktif{
