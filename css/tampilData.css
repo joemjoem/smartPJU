@@ -1,1 +1,68 @@
 @import "nav.css";
+
+.main{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: #ffffff;
+  height: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.main .judul{
+  display: flex;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(30, 62, 123);
+}
+
+.main .judul img{
+  width: 30px;
+}
+
+.main .judul h1{
+  color: #ffffff;
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.main .data{
+  display: flex;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-nilai, .status-lokasi{
+  width: 50%;
+}
+
+.box-nilai{
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  box-sizing: border-box;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+.nilai{
+background-color: aqua;
+width: 200px;
+height: 100px;
+}
+
+.nilai h2 span{
+  font: 10px !important;
+}
+
+.nilai h2{
+  font-size: 50px;
+}
+
