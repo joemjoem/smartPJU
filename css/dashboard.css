@@ -1,0 +1,87 @@
+@import "nav.css";
+
+/* filter */
+.box-filter{
+  margin-top: 20px;
+}
+
+.main .box-filter select{
+  padding: 5px 4px;
+  border: 1px solid #7c7c7c;
+  border-radius: 5px;
+  color: #5f5f5f;
+}
+
+.filter-kota{
+  display: none;
+}
+
+.filter-status{
+  display: none;
+}
+
+/* main */
+.main{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  height: 500px;
+}
+
+.main h1{
+  font-weight: 100;
+  font-size: 20px;
+  color: #1E3E7B;
+}
+
+.main table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.main table th, .main table td{
+  padding: 8px 20px;
+}
+
+.main table td{
+border: 1px solid #7c7c7c;
+}
+
+.main table th{
+  border: 1px solid #7c7c7c;
+}
+
+.main table th{
+  background-color: #1E3E7B;
+  color: #ffffff;
+}
+
+.main table tr:nth-child(even){
+  background-color: #ececec;
+}
+
+.main table tr td:nth-child(5) p{
+  background-color: rgb(40, 252, 40);
+  padding: 2px 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.main table tr td a{
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #1E3E7B;
+  color: #ffffff;
+  padding: 4px 20px;
+  margin-left: 25px;
+}
+
+.main table tr td:nth-child(5) p.tidak_aktif{
+  background-color: red;
+}
