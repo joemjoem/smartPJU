@@ -1,3 +1,25 @@
+<?php
+require "tampilData/functions.php";
+
+if (isset($_POST["login"])) {
+  $email = $_POST["email"];
+  $password  = $_POST["password"];
+
+  $cek = mysqli_query($conn, "SELECT * FROM dataAkun WHERE Email = '$email'");
+  if (mysqli_num_rows($cek) === 1) {
+    $row = mysqli_fetch_assoc($cek);
+
+    if (password_verify($password, $row["password"])) {
+      header("location: dashbord.php");
+      exit;
+    }
+  }
+  $error = true;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,14 +39,19 @@
       </div>
     </div>
     <div class="signUp-form">
-      <form action="">
+      <form action="" method="POST">
         <h1>Login</h1>
         <label for="">Email</label>
-        <input type="text">
+        <input type="text" name="email" id="email">
         <label for="">Password</label>
-        <input type="password" name="" id="">
-        <p>create your account?<a href="signUp.html">SignUp</a></p>
-        <button>login</button>
+        <input type="password" name="password" id="password">
+        <p>create your account?<a href="signUp.php">SignUp</a></p>
+        <button type="submit" name="login">login</button>
+
+        <!-- jika email atau password salah -->
+        <?php if (isset($error)) : ?>
+          <p style="color: red; font-style: italic;">email/password salah</p>
+        <?php endif; ?>
       </form>
     </div>
   </div>

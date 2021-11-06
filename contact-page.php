@@ -17,9 +17,9 @@
       </div>
       <div class="navbar">
         <li>
-          <ul><a href="dashbord.html">Monitoring PJU</a></ul>
+          <ul><a href="dashbord.php">Monitoring PJU</a></ul>
           <ul><a href="">Monitoring data</a></ul>
-          <ul><a href="contact-page.html">Contact</a></ul>
+          <ul><a href="contact-page.php">Contact</a></ul>
         </li>
     </nav>
   </div>

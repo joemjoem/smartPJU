@@ -18,9 +18,9 @@
       </div>
       <div class="navbar">
         <li>
-          <ul><a href="dashbord.html">Monitoring PJU</a></ul>
+          <ul><a href="dashbord.php">Monitoring PJU</a></ul>
           <ul><a href="">Monitoring data</a></ul>
-          <ul><a href="contact-page.html">Contact</a></ul>
+          <ul><a href="contact-page.php">Contact</a></ul>
         </li>
       </div>
     </nav>
@@ -69,7 +69,7 @@
           <td>
             <p>aktif</p>
           </td>
-          <td><a href="tampilData.html">cek</a></td>
+          <td><a href="tampilData.php">cek</a></td>
         </tr>
 
         <tr>
@@ -80,7 +80,7 @@
           <td>
             <p class="tidak_aktif">tidak aktif</p>
           </td>
-          <td><a href="tampilData.html">cek</a></td>
+          <td><a href="tampilData.php">cek</a></td>
         </tr>
 
         <tr>
@@ -91,7 +91,7 @@
           <td>
             <p>aktif</p>
           </td>
-          <td><a href="tampilData.html">cek</a></td>
+          <td><a href="tampilData.php">cek</a></td>
         </tr>
 
         <tr>
@@ -102,7 +102,7 @@
           <td>
             <p>aktif</p>
           </td>
-          <td><a href="tampilData.html">cek</a></td>
+          <td><a href="tampilData.php">cek</a></td>
         </tr>
 
         <tr>
@@ -113,7 +113,7 @@
           <td>
             <p>aktif</p>
           </td>
-          <td><a href="tampilData.html">cek</a></td>
+          <td><a href="tampilData.php">cek</a></td>
         </tr>
 
         <tr>
@@ -124,7 +124,7 @@
           <td>
             <p>aktif</p>
           </td>
-          <td><a href="tampilData.html">cek</a></td>
+          <td><a href="tampilData.php">cek</a></td>
         </tr>
 
         <tr>
@@ -135,7 +135,7 @@
           <td>
             <p>aktif</p>
           </td>
-          <td><a href="tampilData.html">cek</a></td>
+          <td><a href="tampilData.php">cek</a></td>
         </tr>
 
       </table>
