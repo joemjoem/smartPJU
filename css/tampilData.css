@@ -6,7 +6,7 @@
   margin-right: auto;
   margin-top: 20px;
   background-color: #ffffff;
-  height: 500px;
+  height: 450px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -36,6 +36,7 @@
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
+  color: #1E3E7B;
 }
 
 .box-nilai, .status-lokasi{
@@ -53,16 +54,94 @@
 }
 
 .nilai{
-background-color: aqua;
+/* background-color: aqua; */
 width: 200px;
 height: 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
-.nilai h2 span{
-  font: 10px !important;
+.nilai-data{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nilai h2{
+.nilai-data span{
+  font-size: 20px
+}
+
+.nilai-data h2{
   font-size: 50px;
+  margin-right: 10px;
+}
+
+/* status lokasi */
+.status-lokasi{
+  height: 320px;
+  box-sizing: border-box;
+  padding: 18px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.status{
+  display: flex;
+  align-items: center;
+}
+
+.status h3{
+  margin-right: 10px;
+}
+
+.status p{
+  padding: 4px 8px;
+  background-color: rgb(40, 252, 40);
+  border-radius: 5px;
+  color: #000000;
+}
+
+.lokasi{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.lokasi h3{
+  margin-right: 10px;
+}
+
+.status-lokasi a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.status-lokasi .tombol{
+  margin-top: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.btn-cek-lokasi{
+  background-color: #1E3E7B;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.status-lokasi .btn-kembali{
+  background-color: #EEE50C;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #1E3E7B;
+  margin-right: 10px;
+}
+
+.btn-kembali img{
+  width: 15px;
 }
 
