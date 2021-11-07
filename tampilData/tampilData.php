@@ -86,14 +86,20 @@ $datPJU = query("SELECT * FROM pju1");
               <h3>status:</h3>
               <p>Aktif</p>
             </div>
+
             <div class="lokasi">
-              <h3>Lokasi:</h3>
+              <h3>Lokasi: </h3>
               <p><?= $datPJU["lokasi"]; ?></p>
+            </div>
+
+            <div class="kota">
+              <h3>kota: </h3>
+              <p><?= $datPJU["kota"]; ?></p>
             </div>
           </div>
 
           <div class="tombol">
-            <a href="dashbord.php" class="btn-kembali"> <img src="../img/kembali.png" alt=""> Kembali</a>
+            <a href="../dashbord.php" class="btn-kembali"> <img src="../img/kembali.png" alt=""> Kembali</a>
             <a href="" class="btn-cek-lokasi">cek lokasi</a>
           </div>
         </div>

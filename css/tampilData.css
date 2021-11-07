@@ -106,11 +106,17 @@ justify-content: center;
 
 .lokasi{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 20px;
 }
 
-.lokasi h3{
+.data-status .kota{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.lokasi h3, .kota h3{
   margin-right: 10px;
 }
 

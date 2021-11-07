@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "smartPJU");
+$conn = mysqli_connect("localhost", "root", "", "smartpju");
 
 
 function query($query)

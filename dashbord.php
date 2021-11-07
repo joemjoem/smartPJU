@@ -1,3 +1,9 @@
+<?php
+require 'tampilData/functions.php';
+$data = query("SELECT * FROM pju1");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,83 +67,26 @@
           <th>cek</th>
         </tr>
 
-        <tr>
-          <td>1</td>
-          <td>PJU 1</td>
-          <td>Jl.raya mojoagung</td>
-          <td>jombang</td>
-          <td>
-            <p>aktif</p>
-          </td>
-          <td><a href="tampilData.php">cek</a></td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>PJU 2</td>
-          <td>Jl.keputih 3</td>
-          <td>jombang</td>
-          <td>
-            <p class="tidak_aktif">tidak aktif</p>
-          </td>
-          <td><a href="tampilData.php">cek</a></td>
-        </tr>
-
-        <tr>
-          <td>3</td>
-          <td>PJU 3</td>
-          <td>Jl.ir.soekarno</td>
-          <td>jombang</td>
-          <td>
-            <p>aktif</p>
-          </td>
-          <td><a href="tampilData.php">cek</a></td>
-        </tr>
-
-        <tr>
-          <td>4</td>
-          <td>PJU 3</td>
-          <td>Jl.ir.soekarno</td>
-          <td>jombang</td>
-          <td>
-            <p>aktif</p>
-          </td>
-          <td><a href="tampilData.php">cek</a></td>
-        </tr>
-
-        <tr>
-          <td>5</td>
-          <td>PJU 3</td>
-          <td>Jl.ir.soekarno</td>
-          <td>jombang</td>
-          <td>
-            <p>aktif</p>
-          </td>
-          <td><a href="tampilData.php">cek</a></td>
-        </tr>
-
-        <tr>
-          <td>6</td>
-          <td>PJU 3</td>
-          <td>Jl.ir.soekarno</td>
-          <td>jombang</td>
-          <td>
-            <p>aktif</p>
-          </td>
-          <td><a href="tampilData.php">cek</a></td>
-        </tr>
-
-        <tr>
-          <td>7</td>
-          <td>PJU 3</td>
-          <td>Jl.ir.soekarno</td>
-          <td>jombang</td>
-          <td>
-            <p>aktif</p>
-          </td>
-          <td><a href="tampilData.php">cek</a></td>
-        </tr>
-
+        <?php $i = 1; ?>
+        <?php foreach ($data as $row) : ?>
+          <tr>
+            <td><?= $i; ?></td>
+            <td>
+              <?= $row["nama"]; ?>
+            </td>
+            <td>
+              <?= $row["lokasi"]; ?>
+            </td>
+            <td>
+              <?= $row["kota"]; ?>
+            </td>
+            <td>
+              <p>aktif</p>
+            </td>
+            <td><a href="tampilData/tampilData.php">cek</a></td>
+          </tr>
+          <?php $i++; ?>
+        <?php endforeach; ?>
       </table>
     </div>
   </div>
