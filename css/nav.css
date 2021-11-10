@@ -26,18 +26,18 @@ nav .navbar{
   width: 60%;
 }
 
-nav .navbar li{
+nav .navbar ul{
   display: flex;
   justify-content: space-between;
   font-size: 20px;
   color: #ffffff;
 }
 
-nav .navbar li ul{
+nav .navbar ul li{
   list-style: none;
 }
 
-nav .navbar li ul a{
+nav .navbar ul li a{
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
@@ -45,9 +45,16 @@ nav .navbar li ul a{
   transition: 0.3s;
 }
 
-nav .navbar li ul a:hover{
+nav .navbar ul li a:hover{
   background-color: #EEE50C;
   border-radius: 5px;
   color: #1E3E7B;
+}
+
+/* mobile version */
+@media screen and (max-width: 576px) {
+  nav .logo img{
+    width: 100px;
+  }
 }
 

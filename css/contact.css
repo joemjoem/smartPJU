@@ -43,3 +43,96 @@ body{
 .contact p{
   margin-bottom: 10px;
 }
+
+/* hamburger menu */
+.menu-toggle{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul{
+      list-style: none;
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      transform: translateX(100%);
+  }
+}
+
+/* mobile version */
+@media screen and (max-width: 576px) {
+
+  /* responsive navbar */
+  nav ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgb(95, 95, 248);
+    height: 100vh ;
+    align-items: center;
+    justify-content: flex-start !important;
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav li{
+    margin-top: 60px;
+  }
+
+  nav ul.slide{
+      transform: translateX(0);
+      opacity: 1;
+  }
+
+  /* hamburger menu */
+  .menu-toggle{
+      display: flex;
+      flex-direction: column;
+      height: 20px;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+  }
+  .menu-toggle span{
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: aliceblue;
+      border-radius: 3px;
+      transition: all 0.5s;
+  }
+
+  .menu-toggle input{
+      position: absolute;
+      width: 40px;
+      height: 28px;
+      left: -6px;
+      top: -4px;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 3;
+  }
+
+  /* hamburger animation */
+  .menu-toggle span:nth-child(2){
+      transform-origin: 0 0;
+  }
+  .menu-toggle input:checked ~ span:nth-child(2){
+      /* bacanya, jika input di ceklist maka carikan span yang merupakan anak kedua yang merupakan saudara kandung input
+        (nama teknik: sibling */
+      transform: rotate(45deg) translate(-1px, -1px);
+  }
+
+  .menu-toggle span:nth-child(4){
+      transform-origin: 0 100%;
+  }
+  .menu-toggle input:checked ~ span:nth-child(4){
+      transform: rotate(-45deg) translate(-1px, 0);
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(3){
+      transform: scale(0);
+  }
+
+}

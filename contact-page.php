@@ -16,11 +16,18 @@
         <img src="img/logo-login.png" alt="">
       </div>
       <div class="navbar">
-        <li>
-          <ul><a href="dashbord.php">Monitoring PJU</a></ul>
-          <ul><a href="">Monitoring data</a></ul>
-          <ul><a href="contact-page.php">Contact</a></ul>
-        </li>
+        <ul>
+          <li><a href="dashbord.php">Monitoring PJU</a></li>
+          <li><a href="">Monitoring data</a></li>
+          <li><a href="contact-page.php">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
 
@@ -44,6 +51,7 @@
       </div>
     </div>
   </div>
+  <script src="js/contact.js"></script>
 </body>
 
 </html>
