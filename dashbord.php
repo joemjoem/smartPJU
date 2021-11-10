@@ -1,9 +1,20 @@
+<!-- php -->
 <?php
 require 'tampilData/functions.php';
 $data = query("SELECT * FROM pju1");
+$data_kota = query("SELECT DISTINCT kota FROM pju1");
+
+//pilihan
+if (isset($_POST["filter_input"])) {
+  if ($_POST["filter_kota"] == "0") {
+    $data = query("SELECT * FROM pju1");
+  } else {
+    $data = cari($_POST["filter_kota"]);
+  }
+}
 ?>
 
-
+<!-- html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,22 +48,27 @@ $data = query("SELECT * FROM pju1");
       <!-- filter -->
       <div class="box-filter">
         <select class="filter" name="filter" id="filter">
-          <option value="0">filter berdasarkan</option>
-          <option value="kotak">kota</option>
-          <option value="status">status</option>
+          <option selected id="default">filter berdasarkan</option>
+          <option id="kota">kota</option>
+          <option id="status">status</option>
         </select>
 
-        <select class="filter-kota" name="filter-kota" id="filter-kota">
-          <option value="0">pilih kota</option>
-          <option value="surabaya">surabaya</option>
-          <option value="jombang">jombang</option>
-        </select>
+        <form action="" method="POST">
+          <select class="filter-kota" name="filter_kota" id="filter_kota">
+            <option value="0">pilih kota</option>
+            <?php foreach ($data_kota as $kota) : ?>
+              <option value="<?= $kota["kota"]; ?>"><?= $kota["kota"]; ?></option>
+            <?php endforeach; ?>
+          </select>
 
-        <select class="filter-status" name="filter-status" id="filter-status">
-          <option value="0">pilih status</option>
-          <option value="aktif">aktif</option>
-          <option value="tidak aktif">tidak aktif</option>
-        </select>
+          <select class="filter-status" name="filter_status" id="filter_status">
+            <option value="0">pilih status</option>
+            <option value="aktif">aktif</option>
+            <option value="tidak aktif">tidak aktif</option>
+          </select>
+
+          <button type="submit" name="filter_input">cari</button>
+        </form>
 
       </div>
       <!-- akhir filter -->
@@ -91,6 +107,7 @@ $data = query("SELECT * FROM pju1");
     </div>
   </div>
 
+  <!-- javascript -->
   <script src="js/dashbord.js"> </script>
 </body>
 

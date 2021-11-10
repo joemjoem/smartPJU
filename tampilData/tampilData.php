@@ -40,42 +40,42 @@ $datPJU = query("SELECT * FROM pju1");
         <div class="box-nilai">
           <div class="nilai">
             <div class="nilai-data">
-              <h2><?= $datPJU["tegangan"]; ?></h2><span>V</span>
+              <h2 id="tegangan"></h2><span>V</span>
             </div>
             <p>Voltage</p>
           </div>
 
           <div class="nilai">
             <div class="nilai-data">
-              <h2><?= $datPJU["arus"]; ?></h2><span>A</span>
+              <h2 id="arus"></h2><span>A</span>
             </div>
             <p>Current</p>
           </div>
 
           <div class="nilai">
             <div class="nilai-data">
-              <h2><?= $datPJU["power"]; ?></h2><span>W</span>
+              <h2 id="power"></h2><span>W</span>
             </div>
             <p>Power</p>
           </div>
 
           <div class="nilai">
             <div class="nilai-data">
-              <h2><?= $datPJU["energy"]; ?></h2><span>V</span>
+              <h2 id="energy"></h2><span>V</span>
             </div>
             <p>Energy</p>
           </div>
 
           <div class="nilai">
             <div class="nilai-data">
-              <h2><?= $datPJU["frekuensi"]; ?></h2><span>Hz</span>
+              <h2 id="frekuensi"></h2><span>Hz</span>
             </div>
             <p>Frequency</p>
           </div>
 
           <div class="nilai">
             <div class="nilai-data">
-              <h2><?= $datPJU["powerFactor"]; ?></h2><span>V</span>
+              <h2 id="powerFactor"></h2><span>V</span>
             </div>
             <p>Power Factor</p>
           </div>
@@ -89,12 +89,12 @@ $datPJU = query("SELECT * FROM pju1");
 
             <div class="lokasi">
               <h3>Lokasi: </h3>
-              <p><?= $datPJU["lokasi"]; ?></p>
+              <p id="lokasi"></p>
             </div>
 
             <div class="kota">
               <h3>kota: </h3>
-              <p><?= $datPJU["kota"]; ?></p>
+              <p id="kota"></p>
             </div>
           </div>
 
@@ -104,9 +104,13 @@ $datPJU = query("SELECT * FROM pju1");
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
+  <!-- javascript -->
+  <script src="jquery/jquery.min.js"></script>
+  <script src="realtime.js"></script>
 </body>
 
 </html>

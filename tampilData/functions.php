@@ -1,14 +1,12 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "smartpju");
-
-
 function query($query)
 {
   global $conn;
   $result = mysqli_query($conn, $query);
   $rows = [];
   while ($row = mysqli_fetch_assoc($result)) {
-    $rows = $row;
+    $rows[] = $row;
   }
 
   return $rows;
@@ -42,4 +40,10 @@ function daftar($data)
   // memasukkan data ke databse
   mysqli_query($conn, "INSERT INTO dataAkun VALUES('', '$nama', '$email', '$password')");
   return mysqli_affected_rows($conn);
+}
+
+function cari($pilihan)
+{
+  $query = "SELECT * FROM pju1 WHERE kota = '$pilihan';";
+  return query($query);
 }

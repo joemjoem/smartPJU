@@ -3,6 +3,7 @@
 /* filter */
 .box-filter{
   margin-top: 20px;
+  display: flex;
 }
 
 .main .box-filter select{
@@ -12,12 +13,18 @@
   color: #5f5f5f;
 }
 
-.filter-kota{
-  display: none;
+.filter{
+  margin-right: 10px;
 }
 
-.filter-status{
+.filter-kota, .filter-status{
   display: none;
+  margin-right: 10px;
+}
+
+.main .box-filter button{
+  padding: 4px 8px;
+  cursor: pointer;
 }
 
 /* main */
