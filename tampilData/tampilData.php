@@ -22,9 +22,9 @@ $datPJU = query("SELECT * FROM pju1");
       </div>
       <div class="navbar">
         <li>
-          <ul><a href="dashbord.php">Monitoring PJU</a></ul>
+          <ul><a href="../dashbord.php">Monitoring PJU</a></ul>
           <ul><a href="tampilData.php">Monitoring data</a></ul>
-          <ul><a href="contact-page.php">Contact</a></ul>
+          <ul><a href="../contact-page.php">Contact</a></ul>
         </li>
       </div>
     </nav>
@@ -98,9 +98,11 @@ $datPJU = query("SELECT * FROM pju1");
             </div>
           </div>
 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5616124219387!2d112.78948481441763!3d-7.290614294737927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa4227c8a8ad%3A0xa1275d5bce212771!2sJl.%20Arief%20Rahman%20Hakim%2C%20Keputih%2C%20Kec.%20Sukolilo%2C%20Kota%20SBY%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1636507800494!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
           <div class="tombol">
             <a href="../dashbord.php" class="btn-kembali"> <img src="../img/kembali.png" alt=""> Kembali</a>
-            <a href="" class="btn-cek-lokasi">cek lokasi</a>
+            <a href="https://goo.gl/maps/zbeeQRu9LQx5JbN37" target="blank" class="btn-cek-lokasi">cek lokasi</a>
           </div>
         </div>
       </div>

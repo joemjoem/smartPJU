@@ -35,13 +35,13 @@
   margin-top: 20px;
   background-color: #ffffff;
   padding: 20px 40px;
-  height: 500px;
+  min-height: 550px;
 }
 
 .main h1{
   font-weight: 100;
   font-size: 20px;
-  color: #487ad6;
+  color: #1E3E7B;
 }
 
 .main table{

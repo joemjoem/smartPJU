@@ -139,6 +139,16 @@ justify-content: center;
   color: #ffffff;
 }
 
+iframe{
+  margin-top: 10px;
+  width:"400px" ;
+  height:"450px";
+}
+
+.btn-cek-lokasi:hover{
+  background-color: rgba(30, 62, 123, 0.7);
+}
+
 .status-lokasi .btn-kembali{
   background-color: #EEE50C;
   padding: 4px 8px;

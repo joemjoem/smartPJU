@@ -38,3 +38,18 @@
 .box a:hover{
   background-color: rgba(30, 62, 123, 0.8);
 }
+
+/* mobile version */
+@media screen and (max-width: 680px) {
+  .box h2{
+    font-size: 18px;
+  }
+
+  .box img{
+    width: 230px;
+  }
+
+  .box a{
+    padding: 7px 20px;
+  }
+}

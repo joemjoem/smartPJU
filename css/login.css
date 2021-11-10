@@ -24,31 +24,31 @@ body{
   width: 400px;
 }
 
-.signUp-form{
+.login-form{
   width: 400px;
   /* color: #ffffff; */
   background-color: #ffffff;
   border-radius: 10px;
 }
 
-.signUp-form h1{
+.login-form h1{
   color: #1E3E7B;
   margin-bottom: 20px;
 }
 
-.signUp-form form{
+.login-form form{
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding: 70px 50px;
 }
 
-.signUp-form form label{
+.login-form form label{
   color: #988080;
   margin-bottom: 5px;
 }
 
-.signUp-form form input{
+.login-form form input{
   height: 28px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -56,11 +56,11 @@ body{
   box-shadow: 2px 2px 2px  rgba(152, 128, 128,1);
 }
 
-.signUp-form form p{
+.login-form form p{
   font-size: 12px;
 }
 
-.signUp-form form button{
+.login-form form button{
   height: 40px;
   margin-top: 20px;
   border: none;
@@ -71,11 +71,46 @@ body{
   cursor: pointer;
 }
 
-.signUp-form form button:active{
+.login-form form button:hover{
   background-color: rgba(30, 62, 123,0.7);
 }
 
-.signUp-form form a{
+.login-form form a{
   text-decoration: none;
   margin-left: 3px;
+}
+
+/* mobile version */
+@media screen and (max-width: 680px) {
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-form{
+    width: 300px;
+  }
+
+  .login-form form{
+    padding: 30px 20px;
+  }
+
+  .login-form form label{
+    font-size: 12px;
+  }
+
+  .logo{
+    width: 500px;
+    height: 90px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .logo img{
+    width: 170px;
+
+  }
 }

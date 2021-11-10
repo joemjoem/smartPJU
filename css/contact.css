@@ -1,16 +1,45 @@
 @import "nav.css";
 
-.contact{
-  position: absolute;
-  width: 649px;
-  height: 781px;
-  left: 877px;
-  top: 183px;
-  background: #F5F5F5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
+body{
+  background-color: #F5F5F5;
 }
 
-nav .big-logo{
-  position: absolute;
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.logo-contact{
+  width: 500px;
+  height: 90px;
+}
+
+.logo-contact img{
+  width: 400px;
+}
+
+.contact{
+  width: 400px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  color: #1E3E7B;
+}
+
+.contact-text{
+  text-align: center;
+  width: 300px;
+  margin: 0 auto 40px auto;
+}
+
+.contact h4{
+  margin-bottom: 5px;
+}
+
+.contact p{
+  margin-bottom: 10px;
 }

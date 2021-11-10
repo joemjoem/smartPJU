@@ -8,7 +8,7 @@ body{
   background-color: #e7e7e7;
 }
 
-.container nav{
+nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@ nav .logo img{
   width: 200px;
 }
 
-.container nav .navbar{
+nav .navbar{
   width: 60%;
 }
 

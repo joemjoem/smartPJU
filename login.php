@@ -38,7 +38,7 @@ if (isset($_POST["login"])) {
         <img src="img/logo-login.png" alt="">
       </div>
     </div>
-    <div class="signUp-form">
+    <div class="login-form">
       <form action="" method="POST">
         <h1>Login</h1>
         <label for="">Email</label>

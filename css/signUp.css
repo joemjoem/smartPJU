@@ -70,7 +70,7 @@ body{
   cursor: pointer;
 }
 
-.signUp-form form button:active{
+.signUp-form form button:hover{
   background-color: rgba(30, 62, 123,0.7);
 }
 
@@ -85,4 +85,39 @@ body{
 
 .signUp-form form a:hover{
   color: #1E3E7B;
+}
+
+/* mobile version */
+@media screen and (max-width: 680px) {
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .signUp-form{
+    width: 300px;
+  }
+
+  .signUp-form form{
+    padding: 30px 20px;
+  }
+
+  .signUp-form form label{
+    font-size: 12px;
+  }
+
+  .logo{
+    width: 500px;
+    height: 90px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .logo img{
+    width: 170px;
+
+  }
 }
