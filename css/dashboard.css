@@ -1,5 +1,9 @@
 @import "nav.css";
 
+body{
+  overflow-x: hidden;
+}
+
 /* filter */
 .box-filter{
   margin-top: 20px;
