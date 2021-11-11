@@ -42,8 +42,19 @@ function daftar($data)
   return mysqli_affected_rows($conn);
 }
 
-function cari($pilihan)
+function cari($pilihan, $filter)
 {
-  $query = "SELECT * FROM pju1 WHERE kota = '$pilihan';";
+  if ($filter == "kota") {
+    $query = "SELECT * FROM pju1 WHERE kota = '$pilihan';";
+  }
+
+  if ($filter == "status") {
+    if ($pilihan == "aktif") {
+      $query = "SELECT * FROM pju1 WHERE tegangan > 200;";
+    } else {
+      $query = "SELECT * FROM pju1 WHERE tegangan < 200;";
+    }
+  }
+
   return query($query);
 }

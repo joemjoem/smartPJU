@@ -84,7 +84,7 @@ $datPJU = query("SELECT * FROM pju1");
           <div class="data-status">
             <div class="status">
               <h3>status:</h3>
-              <p>Aktif</p>
+              <p id="status"></p>
             </div>
 
             <div class="lokasi">

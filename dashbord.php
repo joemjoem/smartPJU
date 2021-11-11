@@ -6,10 +6,14 @@ $data_kota = query("SELECT DISTINCT kota FROM pju1");
 
 //pilihan
 if (isset($_POST["filter_input"])) {
-  if ($_POST["filter_kota"] == "0") {
-    $data = query("SELECT * FROM pju1");
+  if ($_POST["filter_kota"] != "0") {
+    $filter = "kota";
+    $data = cari($_POST["filter_kota"], $filter);
+  } elseif ($_POST["filter_status"] != "0") {
+    $filter = "status";
+    $data = cari($_POST["filter_status"], $filter);
   } else {
-    $data = cari($_POST["filter_kota"]);
+    $data = query("SELECT * FROM pju1");
   }
 }
 ?>
@@ -71,7 +75,7 @@ if (isset($_POST["filter_input"])) {
           <select class="filter-status" name="filter_status" id="filter_status">
             <option value="0">pilih status</option>
             <option value="aktif">aktif</option>
-            <option value="tidak aktif">tidak aktif</option>
+            <option value="tidak_aktif">tidak aktif</option>
           </select>
 
           <button type="submit" name="filter_input">cari</button>
@@ -104,7 +108,13 @@ if (isset($_POST["filter_input"])) {
               <?= $row["kota"]; ?>
             </td>
             <td>
-              <p>aktif</p>
+              <?php if ($row["tegangan"] > 200) : ?>
+                <p style="color: green;">aktif</p>
+              <?php endif; ?>
+
+              <?php if ($row["tegangan"] < 200) : ?>
+                <p style="color: red;">tidak aktif</p>
+              <?php endif; ?>
             </td>
             <td><a href="tampilData/tampilData.php">cek</a></td>
           </tr>

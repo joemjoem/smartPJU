@@ -75,11 +75,8 @@ border: 1px solid #7c7c7c;
   background-color: #ececec;
 }
 
-.main table tr td:nth-child(5) p{
-  background-color: rgb(40, 252, 40);
-  padding: 2px 4px;
+.main table tr td:nth-child(5){
   text-align: center;
-  border-radius: 5px;
 }
 
 .main table tr td a{
@@ -95,10 +92,6 @@ border: 1px solid #7c7c7c;
 
 .main table tr td a:hover{
   background-color: rgba(30, 62, 123,0.7);
-}
-
-.main table tr td:nth-child(5) p.tidak_aktif{
-  background-color: red;
 }
 
 /* hamburger menu */

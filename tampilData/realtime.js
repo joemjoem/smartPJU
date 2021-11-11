@@ -4,6 +4,7 @@ var power = document.getElementById("power");
 var energy = document.getElementById("energy");
 var frekuensi = document.getElementById("frekuensi");
 var powerFactor = document.getElementById("powerFactor");
+var st = document.getElementById("status");
 var lokasi = document.getElementById("lokasi");
 var kota = document.getElementById("kota");
 
@@ -14,6 +15,10 @@ $(document).ready(function () {
 
     setInterval(function () {
         $(arus).load("arus.php");
+    }, 1000);
+
+    setInterval(function () {
+        $(st).load("status.php");
     }, 1000);
 
     setInterval(function () {
