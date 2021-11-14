@@ -1,7 +1,9 @@
 <!-- php -->
 <?php
 require 'tampilData/functions.php';
+// $data = query("SELECT * FROM pju1");
 $data = query("SELECT * FROM pju1");
+// $data_kota = query("SELECT DISTINCT kota FROM pju1");
 $data_kota = query("SELECT DISTINCT kota FROM pju1");
 
 //pilihan
@@ -122,6 +124,7 @@ if (isset($_POST["filter_input"])) {
         <?php endforeach; ?>
       </table>
     </div>
+    <div class="kotak-hitam"></div>
   </div>
 
   <!-- javascript -->

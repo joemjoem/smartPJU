@@ -5,6 +5,7 @@ const filter_kota = document.getElementById("filter_kota");
 const filter_status = document.getElementById("filter_status");
 const menuToggle = document.querySelector('.menu-toggle input');
 const nav = document.querySelector('nav ul');
+const kotak = document.querySelector('.kotak-hitam');
 
 dflt.addEventListener('click', F_dflt);
 kota.addEventListener('click', F_kota);
@@ -27,4 +28,5 @@ function F_status() {
 
 menuToggle.addEventListener('click', function () {
   nav.classList.toggle('slide');
+  kotak.classList.toggle("kotak_mobile");
 });

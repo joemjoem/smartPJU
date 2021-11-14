@@ -27,12 +27,19 @@ $datPJU = query("SELECT * FROM pju1");
           <li><a href="../contact-page.php">Contact</a></li>
         </ul>
       </div>
+
+      <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
 
     <!-- main -->
     <div class="main">
       <div class="judul">
-        <img src="img/icon-pju.png" alt="">
+        <img src="../img/icon-pju.png" alt="">
         <h1>PJU 1</h1>
       </div>
 
@@ -80,6 +87,7 @@ $datPJU = query("SELECT * FROM pju1");
             <p>Power Factor</p>
           </div>
         </div>
+
         <div class="status-lokasi">
           <div class="data-status">
             <div class="status">
@@ -113,6 +121,7 @@ $datPJU = query("SELECT * FROM pju1");
   <!-- javascript -->
   <script src="jquery/jquery.min.js"></script>
   <script src="realtime.js"></script>
+  <script src="../js/tampilData.js"></script>
 </body>
 
 </html>
