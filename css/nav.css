@@ -29,12 +29,35 @@ nav .navbar{
 nav .navbar ul{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 20px;
   color: #ffffff;
 }
 
 nav .navbar ul li{
   list-style: none;
+}
+
+nav .navbar ul .menu{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+
+nav .navbar ul .menu li a img{
+  display: none;
+}
+
+nav .navbar ul .gambar li {
+  display: flex;
+  align-items: center;
+}
+
+nav .navbar ul li img{
+  width: 40px;
+  cursor: pointer;
 }
 
 nav .navbar ul li a{
@@ -56,5 +79,6 @@ nav .navbar ul li a:hover{
   nav .logo img{
     width: 100px;
   }
+  
 }
 

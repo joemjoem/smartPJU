@@ -45,6 +45,15 @@ body{
   margin-bottom: 10px;
 }
 
+.kotak-hitam{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0,0.5);
+  display: none;
+}
+
 /* hamburger menu */
 .menu-toggle{
   display: none;
@@ -65,20 +74,58 @@ body{
 /* mobile version */
 @media screen and (max-width: 576px) {
 
+  .kotak_mobile{
+    display: inline-block;
+  }
+
   /* responsive navbar */
   nav ul{
     position: absolute;
     top: 0;
     right: 0;
-    flex-direction: column;
-    background-color: rgb(95, 95, 248);
+    flex-direction: column-reverse;
+    background-color: rgb(30, 62, 123);
     height: 100vh ;
     align-items: center;
-    justify-content: flex-start !important;
+    justify-content: flex-end !important;
     transition: all 1s;
     opacity: 0;
+    z-index: 1;
     overflow: hidden;
   }
+
+  nav .navbar ul .menu{
+    margin-top: 60px;
+    width: 270px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+  
+  }
+
+  nav .navbar ul .menu li{
+    width: 230px;
+  }
+
+  nav .navbar ul .menu li a img{
+    display: inline-block;
+    width: 28px;
+    margin-right: 10px;
+  }
+
+  nav .navbar ul .menu li a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  nav .navbar ul li a{
+    color: rgba(0, 0, 0, 1);
+  }
+
 
   nav li{
     margin-top: 60px;
@@ -137,6 +184,23 @@ body{
 
   .menu-toggle input:checked ~ span:nth-child(3){
       transform: scale(0);
+  }
+
+  .contact{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    margin-top: 270px;
+    z-index: -2;
+  }
+
+  .gambar-logo{
+    text-align: center;
+    margin-top: 400px;
+  }
+
+  .gambar-logo img{
+    width: 170px;
   }
 
 }

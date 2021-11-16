@@ -33,98 +33,78 @@ if (isset($_POST["filter_input"])) {
 </head>
 
 <body>
-  <!-- nav -->
-  <div class="container">
-    <nav>
-      <div class="logo">
-        <img src="img/logo-login.png" alt="">
-      </div>
-      <div class="navbar">
-        <ul>
-          <li><a href="dashbord.php">Monitoring PJU</a></li>
-          <li><a href="">Monitoring data</a></li>
-          <li><a href="contact-page.php">Contact</a></li>
-        </ul>
-      </div>
+  <?php require "navbar.php" ?>
 
-      <div class="menu-toggle">
-        <input type="checkbox">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+  <!-- main -->
+  <div class="main">
+    <h1>monitoring data</h1>
+    <!-- filter -->
+    <div class="box-filter">
+      <select class="filter" name="filter" id="filter">
+        <option selected id="default">filter berdasarkan</option>
+        <option id="kota">kota</option>
+        <option id="status">status</option>
+      </select>
 
-    <!-- main -->
-    <div class="main">
-      <h1>monitoring data</h1>
-      <!-- filter -->
-      <div class="box-filter">
-        <select class="filter" name="filter" id="filter">
-          <option selected id="default">filter berdasarkan</option>
-          <option id="kota">kota</option>
-          <option id="status">status</option>
+      <form action="" method="POST">
+        <select class="filter-kota" name="filter_kota" id="filter_kota">
+          <option value="0">pilih kota</option>
+          <?php foreach ($data_kota as $kota) : ?>
+            <option value="<?= $kota["kota"]; ?>"><?= $kota["kota"]; ?></option>
+          <?php endforeach; ?>
         </select>
 
-        <form action="" method="POST">
-          <select class="filter-kota" name="filter_kota" id="filter_kota">
-            <option value="0">pilih kota</option>
-            <?php foreach ($data_kota as $kota) : ?>
-              <option value="<?= $kota["kota"]; ?>"><?= $kota["kota"]; ?></option>
-            <?php endforeach; ?>
-          </select>
+        <select class="filter-status" name="filter_status" id="filter_status">
+          <option value="0">pilih status</option>
+          <option value="aktif">aktif</option>
+          <option value="tidak_aktif">tidak aktif</option>
+        </select>
 
-          <select class="filter-status" name="filter_status" id="filter_status">
-            <option value="0">pilih status</option>
-            <option value="aktif">aktif</option>
-            <option value="tidak_aktif">tidak aktif</option>
-          </select>
+        <button type="submit" name="filter_input">cari</button>
+      </form>
 
-          <button type="submit" name="filter_input">cari</button>
-        </form>
-
-      </div>
-      <!-- akhir filter -->
-
-      <table>
-        <tr>
-          <th>no</th>
-          <th>PJU</th>
-          <th>Lokasi</th>
-          <th>kota/kabupaten</th>
-          <th>Status</th>
-          <th>cek</th>
-        </tr>
-
-        <?php $i = 1; ?>
-        <?php foreach ($data as $row) : ?>
-          <tr>
-            <td><?= $i; ?></td>
-            <td>
-              <?= $row["nama"]; ?>
-            </td>
-            <td>
-              <?= $row["lokasi"]; ?>
-            </td>
-            <td>
-              <?= $row["kota"]; ?>
-            </td>
-            <td>
-              <?php if ($row["tegangan"] > 200) : ?>
-                <p style="color: green;">aktif</p>
-              <?php endif; ?>
-
-              <?php if ($row["tegangan"] < 200) : ?>
-                <p style="color: red;">tidak aktif</p>
-              <?php endif; ?>
-            </td>
-            <td><a href="tampilData/tampilData.php">cek</a></td>
-          </tr>
-          <?php $i++; ?>
-        <?php endforeach; ?>
-      </table>
     </div>
-    <div class="kotak-hitam"></div>
+    <!-- akhir filter -->
+
+    <table>
+      <tr>
+        <th>no</th>
+        <th>PJU</th>
+        <th>Lokasi</th>
+        <th>kota/kabupaten</th>
+        <th>Status</th>
+        <th>cek</th>
+      </tr>
+
+      <?php $i = 1; ?>
+      <?php foreach ($data as $row) : ?>
+        <tr>
+          <td><?= $i; ?></td>
+          <td>
+            <?= $row["nama"]; ?>
+          </td>
+          <td>
+            <?= $row["lokasi"]; ?>
+          </td>
+          <td>
+            <?= $row["kota"]; ?>
+          </td>
+          <td>
+            <?php if ($row["tegangan"] > 200) : ?>
+              <p style="color: green;">aktif</p>
+            <?php endif; ?>
+
+            <?php if ($row["tegangan"] < 200) : ?>
+              <p style="color: red;">tidak aktif</p>
+            <?php endif; ?>
+          </td>
+          <td><a href="tampilData/tampilData.php">cek</a></td>
+        </tr>
+        <?php $i++; ?>
+      <?php endforeach; ?>
+    </table>
+  </div>
+  <div class="kotak-hitam"></div>
   </div>
 
   <!-- javascript -->

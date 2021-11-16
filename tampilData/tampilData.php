@@ -22,9 +22,15 @@ $datPJU = query("SELECT * FROM pju1");
       </div>
       <div class="navbar">
         <ul>
-          <li><a href="../dashbord.php">Monitoring PJU</a></li>
-          <li><a href="tampilData.php">Monitoring data</a></li>
-          <li><a href="../contact-page.php">Contact</a></li>
+          <div class="menu">
+            <li><a href="../dashbord.php"><img src="../img/monitor 2.png" alt=""> Monitoring PJU</a></li>
+            <li><a href=""><img src="../img/bar-chart (2) 1.png" alt=""> Monitoring data</a></li>
+            <li><a href="../contact-page.php"> <img src="../img/contact (1) 1.png" alt=""> Contact</a></li>
+          </div>
+
+          <div class="gambar">
+            <li><img src="../img/profile 1.png" alt=""></li>
+          </div>
         </ul>
       </div>
 
@@ -116,6 +122,7 @@ $datPJU = query("SELECT * FROM pju1");
       </div>
 
     </div>
+    <div class="kotak-hitam"></div>
   </div>
 
   <!-- javascript -->
