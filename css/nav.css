@@ -23,7 +23,7 @@ nav .logo img{
 }
 
 nav .navbar{
-  width: 60%;
+  width: 70%;
 }
 
 nav .navbar ul{
@@ -53,6 +53,12 @@ nav .navbar ul .menu li a img{
 nav .navbar ul .gambar li {
   display: flex;
   align-items: center;
+}
+
+nav .navbar ul .gambar li p{
+  margin-right: 15px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 nav .navbar ul li img{

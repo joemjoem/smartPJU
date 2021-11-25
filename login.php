@@ -5,7 +5,7 @@ if (isset($_POST["login"])) {
   $email = $_POST["email"];
   $password  = $_POST["password"];
 
-  $cek = mysqli_query($conn, "SELECT * FROM dataAkun WHERE Email = '$email'");
+  $cek = mysqli_query($conn, "SELECT * FROM dataakun WHERE Email = '$email'");
   if (mysqli_num_rows($cek) === 1) {
     $row = mysqli_fetch_assoc($cek);
 

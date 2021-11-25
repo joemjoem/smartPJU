@@ -1,7 +1,8 @@
 @import "nav.css";
 
 body{
-  overflow-x: hidden;
+  width: 100%;
+  -webkit-overflow-x: hidden;
 }
 
 /* filter */
@@ -36,10 +37,11 @@ body{
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 80px;
   background-color: #ffffff;
   padding: 20px 40px;
   min-height: 550px;
+  border-radius: 5px;
 }
 
 .main h1{
@@ -111,10 +113,10 @@ border: 1px solid #7c7c7c;
 @media screen and (max-width: 768px) {
   nav ul{
       list-style: none;
-      display: flex;
-      width: 50%;
+      -webkit-display: flex;
+      -webkit-width: 50%;
       justify-content: space-between;
-      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
   }
 }
 
@@ -128,28 +130,28 @@ border: 1px solid #7c7c7c;
   /* responsive navbar */
   @import "nav.css";
   nav ul{
-    position: absolute;
-    top: 0;
-    right: 0;
-    flex-direction: column-reverse;
-    background-color: rgb(30, 62, 123);
-    height: 100vh ;
-    align-items: center;
-    justify-content: flex-end !important;
-    transition: all 1s;
-    opacity: 0;
-    z-index: 1;
-    overflow: hidden;
+    -webkit-position: absolute;
+    -webkit-top: 0;
+    -webkit-right: 0;
+    -webkit-flex-direction: column-reverse;
+    -webkit-background-color: rgb(30, 62, 123);
+    -webkit-height: 100vh ;
+    -webkit-align-items: center;
+    -webkit-justify-content: flex-end !important;
+    -webkit-transition: all 1s;
+    -webkit-opacity: 0;
+    -webkit-z-index: 1;
+    -webkit-overflow: hidden;
   }
 
   nav .navbar ul .menu{
     margin-top: 60px;
-    width: 270px;
+    width: 300px;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-display: flex;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-justify-content: flex-start;
     background-color: white;
   
   }
@@ -159,15 +161,27 @@ border: 1px solid #7c7c7c;
   }
 
   nav .navbar ul .menu li a img{
-    display: inline-block;
+    -webkit-display: inline-block;
     width: 28px;
     margin-right: 10px;
   }
 
   nav .navbar ul .menu li a{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: center;
+  }
+
+  nav .navbar ul .gambar li {
+    -webkit-display: flex;
+    -webkit-flex-direction: column-reverse;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+
+  }
+
+  nav .navbar ul .gambar li p{
+    margin: 10px 0 0 0;
   }
 
   nav .navbar ul li a{
@@ -179,58 +193,58 @@ border: 1px solid #7c7c7c;
   }
 
   nav ul.slide{
-      transform: translateX(0);
-      opacity: 1;
+    -webkit-transform: translateX(0);
+    -webkit-opacity: 1;
   }
 
   /* hamburger menu */
   .menu-toggle{
-      display: flex;
-      flex-direction: column;
-      height: 20px;
-      justify-content: space-between;
-      position: relative;
-      z-index: 2;
+    -webkit-display: flex;
+    -webkit-flex-direction: column;
+    -webkit-height: 20px;
+    -webkit-justify-content: space-between;
+    -webkit-position: relative;
+    -webkit-z-index: 2;
   }
   .menu-toggle span{
-      display: block;
+    -webkit-display: block;
       width: 28px;
       height: 3px;
       background-color: aliceblue;
-      border-radius: 3px;
-      transition: all 0.5s;
+      -webkit-border-radius: 3px;
+      -webkit-transition: all 0.5s;
   }
 
   .menu-toggle input{
-      position: absolute;
+    -webkit-position: absolute;
       width: 40px;
       height: 28px;
-      left: -6px;
-      top: -4px;
-      opacity: 0;
-      cursor: pointer;
-      z-index: 3;
+      -webkit-left: -6px;
+      -webkit-top: -4px;
+      -webkit-opacity: 0;
+      -webkit-cursor: pointer;
+      -webkit-z-index: 3;
   }
 
   /* hamburger animation */
   .menu-toggle span:nth-child(2){
-      transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
   }
   .menu-toggle input:checked ~ span:nth-child(2){
       /* bacanya, jika input di ceklist maka carikan span yang merupakan anak kedua yang merupakan saudara kandung input
         (nama teknik: sibling */
-      transform: rotate(45deg) translate(-1px, -1px);
+        -webkit-transform: rotate(45deg) translate(-1px, -1px);
   }
 
   .menu-toggle span:nth-child(4){
-      transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
   }
   .menu-toggle input:checked ~ span:nth-child(4){
-      transform: rotate(-45deg) translate(-1px, 0);
+    -webkit-transform: rotate(-45deg) translate(-1px, 0);
   }
 
   .menu-toggle input:checked ~ span:nth-child(3){
-      transform: scale(0);
+    -webkit-transform: scale(0);
   }
 
   /* responsive tabel */

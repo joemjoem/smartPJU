@@ -1,6 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "smartPJU");
-// $conn = mysqli_connect("sql211.epizy.com", "epiz_30433189", "xKy5OW97LnN7S", "epiz_30433189_smartPJU");
+// $conn = mysqli_connect("localhost", "root", "", "smartPJU");
+$conn = mysqli_connect("sql211.epizy.com", "epiz_30433189", "xKy5OW97LnN7S", "epiz_30433189_smartPJU");
 
 // untuk query data pusat
 function query($query)
@@ -59,7 +59,7 @@ function cari($pilihan, $filter)
     if ($pilihan == "aktif") {
       $query = "SELECT * FROM pju WHERE tegangan > 200;";
     } else {
-      $query = "SELECT * FROM pju WHERE tegangan <= 200;";
+      $query = "SELECT * FROM pju WHERE tegangan < 200;";
     }
   }
 

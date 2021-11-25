@@ -1,10 +1,12 @@
 <!-- php -->
 <?php
 require 'tampilData/functions.php';
-// $data = query("SELECT * FROM pju1");
-$data = query("SELECT * FROM pju1");
-// $data_kota = query("SELECT DISTINCT kota FROM pju1");
-$data_kota = query("SELECT DISTINCT kota FROM pju1");
+
+//query data ke database
+$data = query("SELECT * FROM pju WHERE namaPJU = 'PJU1' ORDER BY id DESC;");
+
+// query data untuk filter
+$data_kota = query("SELECT DISTINCT kota FROM pju");
 
 //pilihan
 if (isset($_POST["filter_input"])) {
@@ -15,7 +17,7 @@ if (isset($_POST["filter_input"])) {
     $filter = "status";
     $data = cari($_POST["filter_status"], $filter);
   } else {
-    $data = query("SELECT * FROM pju1");
+    $data = query("SELECT * FROM pju");
   }
 }
 ?>
@@ -81,7 +83,7 @@ if (isset($_POST["filter_input"])) {
         <tr>
           <td><?= $i; ?></td>
           <td>
-            <?= $row["nama"]; ?>
+            <?= $row["namaPJU"]; ?>
           </td>
           <td>
             <?= $row["lokasi"]; ?>

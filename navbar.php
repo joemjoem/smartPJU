@@ -13,7 +13,10 @@
 
           </div>
           <div class="gambar">
-            <li><img src="img/profile 1.png" alt=""></li>
+            <li>
+              <p>admin</p>
+              <img src="img/profile 1.png" alt="">
+            </li>
           </div>
 
         </ul>

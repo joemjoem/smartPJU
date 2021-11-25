@@ -1,8 +1,3 @@
-<?php
-require "functions.php";
-$datPJU = query("SELECT * FROM pju1");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +24,10 @@ $datPJU = query("SELECT * FROM pju1");
           </div>
 
           <div class="gambar">
-            <li><img src="../img/profile 1.png" alt=""></li>
+            <li>
+              <p>admin</p>
+              <img src="../img/profile 1.png" alt="">
+            </li>
           </div>
         </ul>
       </div>

@@ -221,6 +221,18 @@ iframe{
   
   }
 
+  nav .navbar ul .gambar li {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  nav .navbar ul .gambar li p{
+    margin: 10px 0 0 0;
+  }
+
   nav .navbar ul .menu li{
     width: 230px;
   }

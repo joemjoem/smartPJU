@@ -1,7 +1,8 @@
 <?php
 require "functions.php";
-$result = mysqli_query($conn, "SELECT * FROM pju1 ORDER BY id DESC");
-$data = mysqli_fetch_array($result);
+// $hasil = mysqli_query($conn, "SELECT * FROM PJU ORDER BY id DESC");
+$hasil = mysqli_query($conn, "SELECT * FROM pju ORDER BY id DESC");
+$data = mysqli_fetch_array($hasil);
 $frekuensi = $data["frekuensi"];
 
 if ($frekuensi == 0) {

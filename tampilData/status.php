@@ -1,11 +1,12 @@
 <?php
 require "functions.php";
-$result = mysqli_query($conn, "SELECT * FROM pju1 ORDER BY id DESC");
-$data = mysqli_fetch_array($result);
+// $hasil = mysqli_query($conn, "SELECT * FROM PJU ORDER BY id DESC");
+$hasil = mysqli_query($conn, "SELECT * FROM pju ORDER BY id DESC");
+$data = mysqli_fetch_array($hasil);
 $status = $data["tegangan"];
 
 if ($status > 200) {
   echo "aktif";
-} elseif ($status < 200) {
-  echo " tidak aktif";
+} elseif ($status <= 200) {
+  echo "tidak aktif";
 }
