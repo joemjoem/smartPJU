@@ -31,16 +31,20 @@ if (isset($_POST["filter_input"])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/dashboard.css">
-  <title>Document</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <title>smartPJU</title>
 </head>
 
 <body>
+  <!-- start:navbar -->
   <?php require "navbar.php" ?>
+  <!-- end:navbar -->
 
-  <!-- main -->
+  <!-- start:main -->
   <div class="main">
     <h1>monitoring data</h1>
-    <!-- filter -->
+
+    <!-- start:filter -->
     <div class="box-filter">
       <select class="filter" name="filter" id="filter">
         <option selected id="default">filter berdasarkan</option>
@@ -64,9 +68,8 @@ if (isset($_POST["filter_input"])) {
 
         <button type="submit" name="filter_input">cari</button>
       </form>
-
     </div>
-    <!-- akhir filter -->
+    <!-- end:filter -->
 
     <table>
       <tr>
@@ -106,6 +109,7 @@ if (isset($_POST["filter_input"])) {
       <?php endforeach; ?>
     </table>
   </div>
+  <!-- end:main -->
   <div class="kotak-hitam"></div>
   </div>
 

@@ -10,8 +10,8 @@
             <li><a href="dashbord.php"><img src="img/monitor 2.png" alt=""> Monitoring PJU</a></li>
             <li><a href=""><img src="img/bar-chart (2) 1.png" alt=""> Monitoring data</a></li>
             <li><a href="contact-page.php"> <img src="img/contact (1) 1.png" alt=""> Contact</a></li>
-
           </div>
+
           <div class="gambar">
             <li>
               <p>admin</p>
