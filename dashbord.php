@@ -3,10 +3,12 @@
 require 'tampilData/functions.php';
 
 //query data ke database
-$data = query("SELECT * FROM pju WHERE namaPJU = 'PJU1' ORDER BY id DESC;");
+//$data = query("SELECT * FROM pju WHERE namaPJU = 'pju1' ORDER BY id DESC;");
+// $data = query("SELECT * FROM pju ORDER BY id DESC LIMIT 1;");
+$data = query("SELECT * FROM daftar");
 
 // query data untuk filter
-$data_kota = query("SELECT DISTINCT kota FROM pju");
+$data_kota = query("SELECT DISTINCT kota FROM daftar");
 
 //pilihan
 if (isset($_POST["filter_input"])) {
@@ -49,7 +51,7 @@ if (isset($_POST["filter_input"])) {
       <select class="filter" name="filter" id="filter">
         <option selected id="default">filter berdasarkan</option>
         <option id="kota">kota</option>
-        <option id="status">status</option>
+        <!-- <option id="status">status</option> -->
       </select>
 
       <form action="" method="POST">
@@ -60,11 +62,11 @@ if (isset($_POST["filter_input"])) {
           <?php endforeach; ?>
         </select>
 
-        <select class="filter-status" name="filter_status" id="filter_status">
+        <!-- <select class="filter-status" name="filter_status" id="filter_status">
           <option value="0">pilih status</option>
           <option value="aktif">aktif</option>
           <option value="tidak_aktif">tidak aktif</option>
-        </select>
+        </select> -->
 
         <button type="submit" name="filter_input">cari</button>
       </form>
@@ -77,7 +79,7 @@ if (isset($_POST["filter_input"])) {
         <th>PJU</th>
         <th>Lokasi</th>
         <th>kota/kabupaten</th>
-        <th>Status</th>
+        <!-- <th>Status</th> -->
         <th>cek</th>
       </tr>
 
@@ -89,20 +91,20 @@ if (isset($_POST["filter_input"])) {
             <?= $row["namaPJU"]; ?>
           </td>
           <td>
-            <?= $row["lokasi"]; ?>
+            <?= $row["alamat"]; ?>
           </td>
           <td>
             <?= $row["kota"]; ?>
           </td>
-          <td>
-            <?php if ($row["tegangan"] > 200) : ?>
+          <!-- <td>
+            <?php if ($row["power"] > 0) : ?>
               <p style="color: green;">aktif</p>
             <?php endif; ?>
 
-            <?php if ($row["tegangan"] < 200) : ?>
+            <?php if ($row["power"] <= 0) : ?>
               <p style="color: red;">tidak aktif</p>
             <?php endif; ?>
-          </td>
+          </td> -->
           <td><a href="tampilData/tampilData.php">cek</a></td>
         </tr>
         <?php $i++; ?>

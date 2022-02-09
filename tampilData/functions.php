@@ -52,14 +52,15 @@ function daftar($data)
 function cari($pilihan, $filter)
 {
   if ($filter == "kota") {
-    $query = "SELECT * FROM pju WHERE kota = '$pilihan';";
+    //$query = "SELECT * FROM pju WHERE kota = '$pilihan';";
+    $query = "SELECT * FROM daftar WHERE kota = '$pilihan';";
   }
 
   if ($filter == "status") {
     if ($pilihan == "aktif") {
-      $query = "SELECT * FROM pju WHERE tegangan > 200;";
+      $query = "SELECT * FROM pju WHERE power > 0 ORDER BY id DESC LIMIT 1;";
     } else {
-      $query = "SELECT * FROM pju WHERE tegangan <= 200;";
+      $query = "SELECT * FROM pju WHERE power <= 0 ORDER BY id DESC LIMIT 1;";
     }
   }
 
